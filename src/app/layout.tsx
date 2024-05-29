@@ -2,6 +2,7 @@ import '~/styles/globals.css'
 
 import { GeistSans } from 'geist/font/sans'
 
+import { Toaster } from '~/components/ui/toaster'
 import { TRPCReactProvider } from '~/trpc/react'
 
 export const metadata = {
@@ -19,6 +20,7 @@ export default function RootLayout({
     <html lang="en" className={`${GeistSans.variable}`}>
       <body>
         <TRPCReactProvider>{children}</TRPCReactProvider>
+        <Toaster />
       </body>
     </html>
   )
